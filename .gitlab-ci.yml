@@ -1,0 +1,19 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+stages:
+  - build
+
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
+
+variables:
+  IMG_NAME: tss-commit
+
+build:
+  stage: build
+  script:
+    - docker build --pull -t $IMG_NAME .
+    - docker push $IMG_NAME

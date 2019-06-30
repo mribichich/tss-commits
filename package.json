@@ -19,6 +19,7 @@
     "typescript": "3.5.1"
   },
   "scripts": {
+    "prestart": "react-env",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@beam-australia/react-env": "^2.1.1",
     "@types/axios": "^0.14.0",
     "@types/ramda": "^0.26.9",
     "@types/styled-components": "^4.1.15"

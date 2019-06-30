@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { sortBy } from 'ramda';
 import moment from 'moment';
+import env from '@beam-australia/react-env';
 
 const gitlabAxios = axios.create({
   baseURL: 'https://gitlab.tss.com.ar/api/v4',
   timeout: 15000,
-  headers: { 'PRIVATE-TOKEN': process.env.REACT_APP_GITLAB_TOKEN },
+  headers: { 'PRIVATE-TOKEN': env('GITLAB_TOKEN') },
 });
 
 export type Commit = {
