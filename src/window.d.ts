@@ -1,5 +1,5 @@
 interface Window {
-  _env: {
+  env: {
     REACT_APP_GITLAB_TOKEN: string;
   };
 }
